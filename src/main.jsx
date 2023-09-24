@@ -11,14 +11,14 @@ import Root from './components/Root/Root';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root></Root>
-  },
-  {
-
+    element: <Root></Root>,
+    children: [
+      {
+        // path: "/",
+        // element:
+      }
+    ]
   }
-
-
-
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

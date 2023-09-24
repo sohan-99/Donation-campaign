@@ -1,10 +1,15 @@
+import { Outlet } from "react-router-dom";
+
+
 
 
 const Root = () => {
     return (
         <div>
-            
-            <h2>sohan</h2>
+
+         
+    
+            <Outlet></Outlet>
         </div>
     );
 };
