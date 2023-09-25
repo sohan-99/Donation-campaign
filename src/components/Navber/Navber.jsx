@@ -16,7 +16,7 @@ const Navber = () => {
         <div>
             <section className="flex flex-col min-h-screen  text-black bg-center bg-cover bg-blend-overlay  bg-white/75" style={{ backgroundImage: 'url(https://i.ibb.co/dmCnLjt/Whats-App-Image-2023-09-25-at-12-47-42-PM.jpg)' }}>
 
-                <div className="navbar bg-base-100 mt-6 ">
+                <div className="navbar bg-base-100 mt-6 max-w-6xl mx-auto ">
                     <div className="navbar-start">
                         <div className="dropdown">
                             <label tabIndex={0} className="btn btn-ghost lg:hidden">

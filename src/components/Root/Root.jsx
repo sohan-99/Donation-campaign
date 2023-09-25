@@ -8,10 +8,11 @@ const Root = () => {
     return (
         <div>
 
+                <Navber></Navber>
+            <div className="max-w-6xl mx-auto">
 
-            <Navber></Navber>
-            
-            <Outlet></Outlet>
+                <Outlet></Outlet>
+            </div>
         </div>
     );
 };

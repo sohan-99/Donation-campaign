@@ -1,14 +1,13 @@
+import CategoryList from "../CAtegoryList/CategoryList";
 
 
-// const Home = () => {
-//     return (
-//         <div>
-           
-//             </div>
-           
+const Home = () => {
+    return (
+        <div>
+            <CategoryList></CategoryList>
+        </div>
 
-//         </div>
-//     );
-// };
+    );
+};
 
-// export default Home;
+export default Home;
