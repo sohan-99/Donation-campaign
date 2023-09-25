@@ -11,7 +11,7 @@ import Root from './components/Root/Root';
 import Donation from './components/Donation/Donation';
 import Statistics from './components/Statistics/Statistics';
 import Errorpage from './components/ErrorPage/Errorpage';
-import Home from './components/Home/Home';
+// import Home from './components/Home/Home';
 
 const router = createBrowserRouter([
   {
@@ -29,7 +29,8 @@ const router = createBrowserRouter([
       },
       {
         path:'/',
-        element:<Home></Home>
+        // element:<Home></Home>
+
       }
 
     ]
