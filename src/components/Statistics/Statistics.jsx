@@ -4,7 +4,7 @@
 const Statistics = () => {
     return (
         <div>
-          
+          <h2 className="mt-4">Statistics pi chart:</h2>
         </div>
     );
 };

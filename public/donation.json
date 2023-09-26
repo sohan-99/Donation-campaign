@@ -8,7 +8,7 @@
         "text_color": "#0052ff",
         "Button_bg": "#008CBA",
         "dscription": "Discover products that promote well-being and a healthy lifestyle. Our selection includes items to support your physical and mental health, ensuring you can live your best life.",
-        "price": "$199.99",
+        "price": "$299",
         "id": "1"
     },
     {
@@ -20,7 +20,7 @@
         "text_color": "#FF444A",
         "Button_bg": "#E74C3C",
         "dscription": "There are many things that can be done to ensure that all people have access to a good education. Governments can invest in public schools, provide financial assistance to students, and make sure that all schools have qualified teachers and resources. Families can support their children's education by creating a learning environment at home and helping them with their schoolwork. Teachers can create a positive and supportive learning environment for their students and challenge them to reach their full potential.",
-        "price": "$49.99",
+        "price": "$299",
         "id": "2"
     },
     {
@@ -32,6 +32,7 @@
         "text_color": "#79C23F",
         "Button_bg": "#2980B9",
         "dscription": "The clothing product offers stylish and comfortable attire suitable for various occasions. With a focus on both fashion and comfort, these clothing items are designed to make you look and feel great. Whether you're dressing up for a special event or simply seeking everyday comfort, our clothing collection in the 'Clothing' category has you covered.",
+        "price": "$299",
         "id": "3"
     },
     {
@@ -43,6 +44,7 @@
         "text_color": "#F87147",
         "Button_bg": "#F39C12",
         "dscription": "This product offers delicious and tempting food options that will satisfy your taste buds and leave you craving for more.",
+        "price": "$299",
         "id": "4"
     },
     {
@@ -54,6 +56,7 @@
         "text_color": "#F87147",
         "Button_bg": "#1ABC9C",
         "dscription": "This product offers delicious and tempting food options that will satisfy your taste buds and leave you craving for more.",
+        "price": "$299",
         "id": "5"
     },
     {
@@ -65,7 +68,7 @@
         "text_color": "#79C23F",
         "Button_bg": "#9B59B6",
         "dscription": "The clothing product offers stylish and comfortable attire suitable for various occasions. With a focus on both fashion and comfort, these clothing items are designed to make you look and feel great. Whether you're dressing up for a special event or simply seeking everyday comfort, our clothing collection in the 'Clothing' category has you covered.",
-        "price": "$99.99",
+        "price": "$299",
         "id": "6"
     },
     {
@@ -77,7 +80,7 @@
         "text_color": "#FF444A",
         "Button_bg": "#27AE60",
         "dscription": "There are many things that can be done to ensure that all people have access to a good education. Governments can invest in public schools, provide financial assistance to students, and make sure that all schools have qualified teachers and resources. Families can support their children's education by creating a learning environment at home and helping them with their schoolwork. Teachers can create a positive and supportive learning environment for their students and challenge them to reach their full potential.",
-        "price": "$69.99",
+        "price": "$299",
         "id": "7"
     },
     {
@@ -89,6 +92,7 @@
         "text_color": "#0052FF",
         "Button_bg": "#F1C40F",
         "dscription": "Discover products that promote well-being and a healthy lifestyle. Our selection includes items to support your physical and mental health, ensuring you can live your best life.",
+        "price": "$299",
         "id": "8"
     },
     {
@@ -100,7 +104,7 @@
         "text_color": "#0052FF",
         "Button_bg": "#E67E22",
         "dscription": "Discover products that promote well-being and a healthy lifestyle. Our selection includes items to support your physical and mental health, ensuring you can live your best life.",
-        "price": "$9.99",
+        "price": "$299",
         "id": "9"
     },
     {
@@ -112,7 +116,7 @@
         "text_color": "#FF444A",
         "Button_bg": "#3498DB",
         "dscription": "There are many things that can be done to ensure that all people have access to a good education. Governments can invest in public schools, provide financial assistance to students, and make sure that all schools have qualified teachers and resources. Families can support their children's education by creating a learning environment at home and helping them with their schoolwork. Teachers can create a positive and supportive learning environment for their students and challenge them to reach their full potential.",
-        "price": "$19.99",
+        "price": "$299",
         "id": "10"
     },
     {
@@ -124,7 +128,7 @@
         "text_color": "#79C23F",
         "Button_bg": "#D35400",
         "dscription": "The clothing product offers stylish and comfortable attire suitable for various occasions. With a focus on both fashion and comfort, these clothing items are designed to make you look and feel great. Whether you're dressing up for a special event or simply seeking everyday comfort, our clothing collection in the 'Clothing' category has you covered.",
-        "price": "$39.99",
+        "price": "$299",
         "id": "11"
     },
     {
@@ -136,6 +140,9 @@
         "text_color": "#F87147",
         "Button_bg": "#16A085",
         "dscription": "This product offers delicious and tempting food options that will satisfy your taste buds and leave you craving for more.",
+        "price": "$299",
         "id": "12"
     }
+    
+
 ]

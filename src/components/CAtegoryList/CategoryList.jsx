@@ -14,14 +14,14 @@ const CategoryList = () => {
             .then(data => setDonationCatagory(data));
 
     }, [])
-    console.log(donationCatagory);
+    // console.log(donationCatagory);
     return (
         <div><div>
 
             {/* <h1>donation list:{donationCatagory.length}</h1> */}
 
         </div>
-            <div className="grid grid-cols-4 my-3">
+            <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 mx-4 my-3">
 
                 {
                     donationCatagory.map(donationCard => <DonationCard key={donationCatagory.id} donationCard={donationCard}></DonationCard>)
@@ -29,8 +29,8 @@ const CategoryList = () => {
             </div>
 
         </div>
+
     );
 };
-
 export default CategoryList;
 
