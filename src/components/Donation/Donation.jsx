@@ -14,7 +14,8 @@ const Donation = () => {
     const donationInfo = useLoaderData();
     console.log(donationInfo);
     const [donation, setDonation] = useState([]);
-    console.log(donation);
+    // console.log(donation);
+    const [dataLength,setDataLength]=useState(4)
     useEffect(() => {
         const storedDonationId = getStoredDonation();
 
@@ -28,16 +29,21 @@ const Donation = () => {
     }, [])
     return (
         <section>
-            <div className="grid grid-cols-2 gap-4 rounded-lg">
+            <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 lg:gap-4 md:gap-2 gap-3 rounded-lg">
             {
-                donation.map(donate => <DonateShow donate={donate}></DonateShow>)
+                donation.slice(0, dataLength).map(donate => <DonateShow donate={donate}></DonateShow>)
             }
     
+        </div >
+        <div className={dataLength === donation.length && 'hidden' }>
+
+        <button  onClick={()=>setDataLength(donation.length)}
+        className="btn  block mx-auto my-10 w-[160px] h-[22px] text-white bg-[#009444] ">See All</button>
         </div>
-        <button className="btn btn-primary block mx-auto my-10">click</button>
         </section>
 
     );
 };
+
 
 export default Donation;

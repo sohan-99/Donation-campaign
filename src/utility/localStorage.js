@@ -3,6 +3,7 @@ const getStoredDonation = () =>{
     const storedDonation = localStorage.getItem('donation-done');
     if(storedDonation){
         return JSON.parse(storedDonation)
+        
     }
     return [];
 }
@@ -13,8 +14,5 @@ if(!exists){
     storedDonation.push(id);
     localStorage.setItem('donation-done',JSON.stringify(storedDonation))
 }
-
-
-
 }
 export {getStoredDonation,saveDonation}
