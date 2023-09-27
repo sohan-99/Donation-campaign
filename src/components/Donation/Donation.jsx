@@ -3,43 +3,44 @@
 
 // import React from 'react';
 import { useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
+// import { useLoaderData } from "react-router-dom";
 import { getStoredDonation } from "../../utility/localStorage";
 import DonateShow from "../DonateShow/DonateShow";
-
-
-
-
 const Donation = () => {
-    const donationInfo = useLoaderData();
+    const [donationInfo, setDonationInfo] = useState([]);
     console.log(donationInfo);
     const [donation, setDonation] = useState([]);
     // console.log(donation);
-    const [dataLength,setDataLength]=useState(4)
+    const [dataLength, setDataLength] = useState(4)
+
+    useEffect(() => {
+        fetch('/donation.json')
+            .then(res => res.json())
+            .then(data => setDonationInfo(data));
+    }, [])
     useEffect(() => {
         const storedDonationId = getStoredDonation();
-
-        if (donationInfo.length > 0) {
-            const donationDone = donationInfo.filter(donationData => storedDonationId.includes(donationData.id));
-
-
+// console.log(storedDonationId);
+        if (donationInfo?.length > 0) {
+            const donationDone = donationInfo?.filter(donationData => storedDonationId.includes(donationData.id));
             setDonation(donationDone)
+            console.log(donationDone);
         }
-    
-    }, [])
+    },[donationInfo])
+    console.log(donation);
     return (
         <section>
             <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 lg:gap-4 md:gap-2 gap-3 rounded-lg">
-            {
-                donation.slice(0, dataLength).map(donate => <DonateShow donate={donate}></DonateShow>)
-            }
-    
-        </div >
-        <div className={dataLength === donation.length && 'hidden' }>
+                {
+                    donation?.slice(0, dataLength)?.map(donate => <DonateShow donate={donate}></DonateShow>)
+                }
 
-        <button  onClick={()=>setDataLength(donation.length)}
-        className="btn  block mx-auto my-10 w-[160px] h-[22px] text-white bg-[#009444] ">See All</button>
-        </div>
+            </div >
+            <div className={dataLength === donation.length && 'hidden'}>
+
+                <button onClick={() => setDataLength(donation.length)}
+                    className="btn  block mx-auto my-10 w-[160px] h-[22px] text-white bg-[#009444] ">See All</button>
+            </div>
         </section>
 
     );

@@ -6,7 +6,7 @@ import { createBrowserRouter,RouterProvider,} from "react-router-dom";
 import './index.css'
 import Root from './components/Root/Root';
 import Statistics from './components/Statistics/Statistics';
-import Errorpage from './components/ErrorPage/Errorpage';
+// import Errorpage from './components/ErrorPage/Errorpage';
 import Home from './components/Home/Home';
 import DonationDetails from './components/DonationDetails/DonationDetails';
 import Donation from './components/Donation/Donation';
@@ -17,7 +17,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    errorElement:<Errorpage></Errorpage>,
+    // errorElement:<Errorpage></Errorpage>,
     children: [
       {
         path: '/',
@@ -27,12 +27,12 @@ const router = createBrowserRouter([
       {
         path: "/donation",
         element:<Donation></Donation>,
-        loader:()=> fetch('/donation.json')
+        loader:()=> fetch('donation.json')
       },
       {
         path: '/statistics',
         element: <Statistics></Statistics>,
-        loader:()=> fetch('/donation.json')
+        loader:()=> fetch('donation.json')
       },
       {
         path: '/donationDetails/:id',

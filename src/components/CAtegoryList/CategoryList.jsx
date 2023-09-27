@@ -9,7 +9,7 @@ import DonationCard from "../DonationCard/DonationCard";
 const CategoryList = () => {
     const [donationCatagory, setDonationCatagory] = useState([]);
     useEffect(() => {
-        fetch('/public/donation.json')
+        fetch('/donation.json')
             .then(res => res.json())
             .then(data => setDonationCatagory(data));
 
@@ -24,7 +24,7 @@ const CategoryList = () => {
             <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 mx-4 my-3">
 
                 {
-                    donationCatagory.map(donationCard => <DonationCard key={donationCatagory.id} donationCard={donationCard}></DonationCard>)
+                    donationCatagory?.map(donationCard => <DonationCard key={donationCard.id} donationCard={donationCard}></DonationCard>)
                 }
             </div>
 
