@@ -1,27 +1,48 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 // import React from 'react';
-
 import { Link, useLoaderData, useParams } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { saveDonation } from "../../utility/localStorage";
 
 const DonationDetails = () => {
+   
+        
     const donationData = useLoaderData();
     const { id } = useParams()
-    console.log(donationData,id);
+    // console.log(donationData, id);
     const donationDetails = donationData.find(donationDetails => donationDetails.id === id)
     // console.log(donationDetails);
+    const notify = () =>
+    {
+    saveDonation(id)
+        toast.success("Donated!")
+    }
+    
     return (
-        <div>
-            <img className="w-full mt-8" src={donationDetails.picture} alt="" />
-            <div className="w-40 text-white bg-[#fff9] rounded font-semibold text-xl -mt-14 p-3" >
-                <Link to={`/donation/${id}`}>
-                    Donate {donationDetails.price}
-                </Link>
-            </div>
+
+        <div className="max-w-6xl mx-auto mb-20">
+            <div className="w-full relative">
+                <img className="w-full mt-8" src={donationDetails.picture} alt="" />
+                <div className="absolute h-36 w-full bottom-0" style={{ backgroundColor: "rgb(0,0,0,0.6)" }}>
+                </div>
+                {/* <Link to={`/donation/${id}`}> */}
+                <div className="py-1 px-2 w-36 m-2  items-center  ml-4 -mt-20 rounded-md absolute button-10 left-20">
+                    <button onClick={notify} className="btn text-white" style={{ background: `${donationDetails.text_color}` }} >
+                        Donate {donationDetails.price}
+                    </button>
+                </div>
+                {/* </Link> */}
+            </div >
             <p className="my-4 font-bold text-[40px] ">{donationDetails.category}</p>
             <p className="mb-4 font-normal text-base">{donationDetails.dscription}</p>
-        </div>
+            <ToastContainer
+                position="top-center"
+            />
+        </div >
 
     );
 };
 export default DonationDetails;
+
